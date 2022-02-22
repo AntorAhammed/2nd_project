@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import ConnectWallet from "./pages/ConnectWallet/ConnectWallet";
+import Contact from "./pages/Contact/Contact";
+import Home from "./pages/Home/Home";
+import NFTdetail from "./pages/NFTDetail/NFTdetail";
+import "./App.css";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [showModal, setShowModal] = useState(false);
+	return (
+		<>
+			<Routes>
+				<Route path="/" exact element={<Home setShowModal={setShowModal} />} />
+				<Route
+					path="/trending"
+					exact
+					element={<NFTdetail setShowModal={setShowModal} />}
+				/>
+				<Route
+					path="/contact"
+					exact
+					element={<Contact setShowModal={setShowModal} />}
+				/>
+			</Routes>
+			<ConnectWallet showModal={showModal} setShowModal={setShowModal} />
+		</>
+	);
 }
 
 export default App;
