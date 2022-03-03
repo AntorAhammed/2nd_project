@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
-import logo from "../assets/img/logo 1.png";
+import logo from "../assets/img/logo.6eaa2fdb.png";
 import "./header.css";
 const Header = ({ setShowModal }) => {
 	const [navActive, isnavActive] = useState(false);
@@ -15,26 +15,30 @@ const Header = ({ setShowModal }) => {
 				<Link to="/">
 					<div className="logo">
 						<img src={logo} alt="logo" />
-						<h1>GHOSPERS</h1>
 					</div>
 				</Link>
 				<div className={navActive ? "links nav-active" : "links"}>
 					<ul className="navigations">
+						<li>
+							<Link to="https://ghospers.com/" activeclassname="active">
+								Home
+							</Link>
+						</li>
 						<li>
 							<NavLink to="/" activeclassname="active">
 								Official
 							</NavLink>
 						</li>
 						<li>
-							<NavLink to="/trending" activeclassname="active">
-								Trending
-							</NavLink>
+							<Link to="https://staking.ghospers.com/" activeclassname="active">
+								Staking
+							</Link>
 						</li>
-						<li>
+						{/* <li>
 							<NavLink to="/contact" activeclassname="active">
 								Contact Us
 							</NavLink>
-						</li>
+						</li> */}
 					</ul>
 					<div className="nav-btn">
 						<a href="/" onClick={openModal}>

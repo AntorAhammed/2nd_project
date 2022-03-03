@@ -29,16 +29,20 @@ const Home = ({ setShowModal }) => {
 							<a href="/">CLEAR ALL</a>
 						</div>
 						<div className="hero">
-							<h4>HEROES</h4>
-							<p>No hero selected</p>
-							<a href="/">Choose Heroes</a>
+							<h4>GHOSPHERS</h4>
+							<p>No Ghosper selected</p>
+							<a href="/">Choose Ghospers</a>
 						</div>
 						<div className="hero">
-							<h4>HEROES</h4>
+							<h4>GHOSPHERS</h4>
 							<div className="checkbox">
 								<label className="checkbox-wrap">
 									<input type="checkbox" />
 									<span className="checkmark"></span>Common
+								</label>
+								<label className="checkbox-wrap">
+									<input type="checkbox" />
+									<span className="checkmark"></span>Rare
 								</label>
 								<label className="checkbox-wrap">
 									<input type="checkbox" />
@@ -75,7 +79,7 @@ const Home = ({ setShowModal }) => {
 							</div>
 						</div>
 						<div className="hero">
-							<h4>CLASS</h4>
+							<h4>TRAITS</h4>
 							<div className="checkbox">
 								<label className="checkbox-wrap">
 									<input type="checkbox" />
@@ -91,11 +95,11 @@ const Home = ({ setShowModal }) => {
 								</label>
 							</div>
 						</div>
-						<div className="hero skin">
+						{/* <div className="hero skin">
 							<h4>SKINS</h4>
 							<p>No skin selected</p>
 							<a href="/">Choose Skin</a>
-						</div>
+						</div> */}
 					</div>
 					<div className="nft-collections">
 						<div className="card">

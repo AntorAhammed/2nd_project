@@ -7,6 +7,9 @@ header {
 	max-width: 1250px;
 	margin: 0 auto;
 }
+header .logo img {
+	width: 260px;
+}
 .logo {
 	display: flex;
 	align-items: center;
